@@ -1,4 +1,5 @@
-import Link from "../src/components/Link";
+import FAQScreen from "../src/screens/FAQScreen";
+export default FAQScreen;
 
 export async function getServerSideProps() {
   const FAQ_API_URL =
@@ -13,25 +14,4 @@ export async function getServerSideProps() {
   return {
     props: { faq },
   };
-}
-
-export default function FAQPage({ faq }) {
-  console.log("dasdas");
-
-  return (
-    <div>
-      <h1>NextJS - FAQ</h1>
-      <Link href="/">Ir para a página Home</Link>
-      <ul>
-        {faq.map(({ answer, question }) => (
-          <li key={question}>
-            <article>
-              <h2>{question}</h2>
-              <p>{answer}</p>
-            </article>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
 }
