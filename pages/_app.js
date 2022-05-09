@@ -8,6 +8,22 @@ function HeadPage() {
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="description" content="NextJS tutorial" />
       <html lang="pt-BR" />
+
+      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-HREMV59GJN"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HREMV59GJN');`,
+        }}
+      />
     </Head>
   );
 }
